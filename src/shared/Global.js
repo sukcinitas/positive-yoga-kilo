@@ -1,6 +1,34 @@
 import { createGlobalStyle } from "styled-components";
+import SFProTextRegular from "../fonts/SF-Pro-Text-Regular.ttf";
+import SFProTextSemiBold from "../fonts/SF-Pro-Text-Semibold.ttf";
+import SFProTextBold from "../fonts/SF-Pro-Text-Bold.ttf";
+import SFProDisplayBold from "../fonts/SF-Pro-Display-Bold.ttf";
 
 const GlobalStyles = createGlobalStyle`
+    @font-face {
+        font-family: "SFProTextRegular";
+        src: url(${SFProTextRegular}) format("truetype");
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: "SFProTextRegular";
+        src: url(${SFProTextSemiBold}) format("truetype");
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: "SFProTextBold";
+        src: url(${SFProTextBold}) format("truetype");
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: "SFProTextBold";
+        src: url(${SFProDisplayBold}) format("truetype");
+        font-weight: 700;
+    }
+
     /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)
@@ -69,10 +97,10 @@ const GlobalStyles = createGlobalStyle`
         --bright-3: #91B83D;
         --dark-1: #22222C;
         --gray-1: #39353C;
-    }
-
-    .App {
-        color: var(--bright-2);
+        --shadow-1: hsla(26, 100%, 65%, 0.24);
+        --shadow-2: hsla(0, 0%, 0%, 0.16);
+        --white: #FFF;
+        --black: #000;
     }
 }
 `;
