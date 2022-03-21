@@ -8,7 +8,6 @@ const Button = styled.button`
   font-size: 1rem;
   border: none;
   padding: 16px;
-  margin: 16px 0;
   text-shadow: 0 4px 8px var(--shadow-2);
   box-shadow: 0 16px 32px var(--shadow-1);
 `;

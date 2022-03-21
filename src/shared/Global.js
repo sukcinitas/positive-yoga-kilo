@@ -8,13 +8,13 @@ const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: "SFProTextRegular";
         src: url(${SFProTextRegular}) format("truetype");
-        font-weight: 700;
+        font-weight: 400;
     }
 
     @font-face {
-        font-family: "SFProTextRegular";
+        font-family: "SFProTextSemibold";
         src: url(${SFProTextSemiBold}) format("truetype");
-        font-weight: 700;
+        font-weight: 600;
     }
 
     @font-face {
@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     @font-face {
-        font-family: "SFProTextBold";
+        font-family: "SFProDisplayBold";
         src: url(${SFProDisplayBold}) format("truetype");
         font-weight: 700;
     }
@@ -95,10 +95,16 @@ const GlobalStyles = createGlobalStyle`
         --bright-1: #FFE082;
         --bright-2: #90CAF9;
         --bright-3: #91B83D;
+        --bright-4: #FFCC80;
         --dark-1: #22222C;
         --gray-1: #39353C;
+        --gray-2: #424242;
+        --gray-3: #212121;
+        --gray-4: rgba(0, 0, 0, 0.08);
+        --gray-5: rgba(0, 0, 0, 0.04);
         --shadow-1: hsla(26, 100%, 65%, 0.24);
         --shadow-2: hsla(0, 0%, 0%, 0.16);
+        --shadow-3: hsla(274, 6%, 22%, 0.08);
         --white: #FFF;
         --black: #000;
     }
