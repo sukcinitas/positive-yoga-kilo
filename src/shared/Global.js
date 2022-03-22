@@ -102,6 +102,7 @@ const GlobalStyles = createGlobalStyle`
         --gray-3: #212121;
         --gray-4: rgba(0, 0, 0, 0.08);
         --gray-5: rgba(0, 0, 0, 0.04);
+        --gray-6: #EBEBEB;
         --shadow-1: hsla(26, 100%, 65%, 0.24);
         --shadow-2: hsla(0, 0%, 0%, 0.16);
         --shadow-3: hsla(274, 6%, 22%, 0.08);
