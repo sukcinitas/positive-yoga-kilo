@@ -35,7 +35,6 @@ export const Accent = styled.span`
     props.bold &&
     css`
       font-family: SFProTextBold, sans-serif;
-      font-weight: 700;
     `}
 
   ${(props) =>
@@ -54,6 +53,6 @@ export const Accent = styled.span`
     ${(props) =>
     props.big &&
     css`
-      font-size: 1.5rem; // 24px in 16px root
+      font-size: 24px;
     `}
 `;
