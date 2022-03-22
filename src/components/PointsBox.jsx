@@ -36,8 +36,8 @@ function PointsBox() {
     <Box>
       <SmallHeading>Is Positive Yoga right for me?</SmallHeading>
       <Points>
-        {points.map((point) => (
-          <Point>
+        {points.map((point, idx) => (
+          <Point key={idx}>
             <StyledCheckCirceOutlineIcon></StyledCheckCirceOutlineIcon>
             <PointsText>{point}</PointsText>
           </Point>

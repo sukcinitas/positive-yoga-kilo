@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const Text = styled.p`
   color: var(--dark-1);
@@ -8,6 +8,7 @@ const Text = styled.p`
 
   & span {
     font-family: SFProTextBold, sans-serif;
+    font-weight: 700;
   }
 `;
 

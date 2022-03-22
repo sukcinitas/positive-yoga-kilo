@@ -4,10 +4,12 @@ export const Heading = styled.h2`
   color: var(--dark-1);
   font-family: SFProDisplayBold, sans-serif;
   font-size: 24px;
+  margin: 10px 0;
 
   @media only screen and (min-width: 480px) {
     font-size: 32px;
     text-align: center;
+    margin: 20px 0;
   }
 
   & span {
@@ -21,6 +23,7 @@ export const LargeHeading = styled(Heading).attrs({
   font-size: 28px;
   font-weight: 800;
   color: var(--black);
+  margin: 0;
 
   @media only screen and (min-width: 480px) {
     font-size: 40px;

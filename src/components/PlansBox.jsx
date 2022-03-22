@@ -108,7 +108,7 @@ function PlansBox() {
             <StyledCircleIcon />
           </StyledPlanCard>
         </PlanCardList>
-        <Button>Get your plan</Button>
+        <Button full>Get your plan</Button>
         <Details center>
           After 7 days free trial subscription payment is automatically charged
           from your account unless it is canceled at least 24 hours before the
