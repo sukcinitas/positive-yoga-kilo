@@ -1,3 +1,9 @@
+### I rougly worked for less 20 hours on this
+
+### Acknowledgments
+
+- [A Simple Carousel with Scroll Indicator in React using hooks by Harshil Darji](https://medium.com/auquan/a-simple-carousel-with-scroll-indicator-in-react-using-hooks-f6f19968f390)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
