@@ -5,15 +5,7 @@ import { SmallHeading } from "../shared/Heading";
 import { StyledCheckCirceOutlineIcon } from "../shared/MaterialIcons";
 import Box from "../shared/Box";
 import Text from "../shared/Text";
-
-const points = [
-  "Each program adapts to your age or fitness level",
-  "Mindful way to exercise and get real results",
-  "Effective and long-term lasting results",
-  "Suited activities that benefit both the mind and body",
-  "Low-intensity but highly-effective workouts",
-  "Extra attention to muscle, joint and back health",
-];
+import { points } from "../util/info";
 
 export const Points = styled.ul`
   display: flex;
