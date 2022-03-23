@@ -49,6 +49,7 @@ const SuccessStories = styled.div`
   @media only screen and (min-width: 980px) {
     justify-content: center;
     padding: 0px 20px 40px;
+    width: 100%;
   }
 `;
 

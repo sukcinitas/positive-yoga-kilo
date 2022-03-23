@@ -3,9 +3,21 @@ import { useRef, useState, useEffect } from "react";
 const imageWidth = 320 + 10; // story width + 10 to make up for padding
 
 export function useHorizontalScroll() {
+  const [width, setWidth] = useState(window.innerWidth);
   const [index, setIndex] = useState(0);
   const slider = useRef();
+
   useEffect(() => {
+    const setInnerWidth = () => setWidth(window.innerWidth);
+
+    window.addEventListener("resize", setInnerWidth);
+    return () => {
+      window.removeEventListener("resize", setInnerWidth);
+    };
+  });
+
+  useEffect(() => {
+    if (width > 1100) return;
     const el = slider.current;
     if (el) {
       const onSlide = (e) => {
@@ -27,6 +39,7 @@ export function useHorizontalScroll() {
         el.removeEventListener("touchmove", setIndexNum);
       };
     }
-  }, []);
+  }, [width]);
+
   return { slider, index };
 }
