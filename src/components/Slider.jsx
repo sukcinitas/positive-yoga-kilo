@@ -1,9 +1,14 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { stories } from "../util/info";
 
 export const StyledSlider = styled.div`
-  margin: -20px auto 40px;
+  margin: 20px auto;
   text-align: center;
+
+  @media only screen and (min-width: 980px) {
+    display: none;
+  }
 `;
 
 export const Ellipse = styled.span`
@@ -22,12 +27,12 @@ export const Ellipse = styled.span`
     `}
 `;
 
-function Slider() {
+function Slider({ activeIndex }) {
   return (
     <StyledSlider>
-      <Ellipse active />
-      <Ellipse />
-      <Ellipse />
+      {stories.map((_, index) => (
+        <Ellipse key={index} active={activeIndex === index} />
+      ))}
     </StyledSlider>
   );
 }

@@ -9,6 +9,7 @@ import Text from "../shared/Text";
 import Box from "../shared/Box";
 import Button from "../shared/Button";
 import { stories } from "../util/info";
+import { useHorizontalScroll } from "../util/useHorizontalScroll";
 
 const Image = styled.img`
   width: 50%;
@@ -41,32 +42,45 @@ const SuccessStories = styled.div`
   left: -16px; // depends on main padding, increase shadow visibility of children
   width: 100vw;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   @media only screen and (min-width: 980px) {
     justify-content: center;
     padding: 0px 20px 40px;
   }
 `;
 
+const Wrapper = styled.div`
+  padding: 0 0 20px;
+  }
+`;
+
 function SuccessStoriesBox() {
+  const { slider: scrollRef, index } = useHorizontalScroll();
+
   return (
     <Box>
       <SmallCenteredHeading>
         Hear success stories from our clients
       </SmallCenteredHeading>
-      <SuccessStories>
-        {stories.map(({ id, name, age, story, city, image }) => (
-          <SuccessStory key={id}>
-            <header>
-              <StoryHeading>{`${name}, ${age}`}</StoryHeading>
-              <Details dull>{city}</Details>
-            </header>
-            <Stars />
-            <Image src={image}></Image>
-            <Text dangerouslySetInnerHTML={{ __html: story }}></Text>
-          </SuccessStory>
-        ))}
-      </SuccessStories>
-      <Slider />
+      <Wrapper>
+        <SuccessStories ref={scrollRef}>
+          {stories.map(({ id, name, age, story, city, image }) => (
+            <SuccessStory key={id}>
+              <header>
+                <StoryHeading>{`${name}, ${age}`}</StoryHeading>
+                <Details dull>{city}</Details>
+              </header>
+              <Stars />
+              <Image src={image}></Image>
+              <Text dangerouslySetInnerHTML={{ __html: story }}></Text>
+            </SuccessStory>
+          ))}
+        </SuccessStories>
+        <Slider activeIndex={index} />
+      </Wrapper>
       <Button>Get my plan</Button>
     </Box>
   );
